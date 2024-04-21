@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const sections = [
+const sections: ListItemType[] = [
   {
     title: "Accueil",
     items: [
@@ -128,7 +128,7 @@ export default function Footer() {
       }
     >
       {sections.map((section, index) => (
-        <ListItem item={section} key={index} />
+        <ListItem item={section} key={section.title} />
       ))}
     </footer>
   );

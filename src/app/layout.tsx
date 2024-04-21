@@ -22,11 +22,13 @@ export default function RootLayout({
         ${fonts.inter.variable}
         ${fonts.anton.variable}
         ${fonts.arima.variable}
-        text-primary-blue
+        text-primary-blue 
       `}
       >
         <Navbar />
-        {children}
+        <div className={"w-full h-full flex flex-col min-h-screen"}>
+          {children}
+        </div>
         <Footer />
       </body>
     </html>

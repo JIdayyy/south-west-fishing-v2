@@ -181,15 +181,15 @@ const EndBlock = () => {
             " w-full relative md:w-[60%]  text-[16px] lg:text-[20px]  text-left"
           }
         >
-          "Que vous soyez débutant ou pêcheur chevroné, nos guidages s’adaptent
-          à vos besoins. <br />
+          `&quot;Que vous soyez débutant ou pêcheur chevroné, nos guidages
+          s’adaptent à vos besoins. <br />
           <br />
           Vous êtes plûtot truite ? Enfillez vos wadders et embarquez sur les
           nives qui nous offiront de splendides paysages et des poissons
           joueurs. <br />
           <br />
           Plutot carnassiers ? L’étang blanc et ses 183 Hectares abrite
-          Black-Bass Brochet Perches et plus encore ..."
+          Black-Bass Brochet Perches et plus encore ...`&quot;
         </span>
         <span
           className={
