@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Metadata } from "next";
 
 type Section = {
   title: string;
@@ -35,6 +36,12 @@ const sections: Section[] = [
     image: "/homepage/barque.png",
   },
 ];
+
+export const metadata: Metadata = {
+  title: "Mathieu Bazard - Guide de pêche",
+  description:
+    "Depuis 2020 South West Fishing vous propose des stages et séjours de pêches dans la région Pays Basque sud Landes.",
+};
 
 export default function Home() {
   return (

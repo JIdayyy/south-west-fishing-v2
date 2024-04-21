@@ -99,7 +99,9 @@ const ListItem = ({ item }: { item: ListItemType }) => {
               <li key={index}>
                 <Link
                   href={item.href}
-                  className={"text-white font-thin  font-arima"}
+                  className={
+                    "text-white font-thin text-[12px] md:text-[15px]   font-arima"
+                  }
                 >
                   {item.text}
                 </Link>
@@ -108,7 +110,11 @@ const ListItem = ({ item }: { item: ListItemType }) => {
           } else {
             return (
               <li key={index}>
-                <p className={"text-white font-thin  font-arima"}>
+                <p
+                  className={
+                    "text-white font-thin text-[12px] md:text-[15px]  font-arima"
+                  }
+                >
                   {item.text}
                 </p>
               </li>
