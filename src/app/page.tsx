@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Metadata } from "next";
+import { Separator } from "@/components/ui/Separator";
+import Section from "@/components/ui/Section";
 
 type Section = {
   title: string;
@@ -205,49 +207,6 @@ const EndBlock = () => {
         >
           FISHING NATURE
         </span>
-      </div>
-    </div>
-  );
-};
-
-const Separator = () => {
-  return (
-    <div className={"w-full relative mt-10 flex justify-center"}>
-      <div
-        className={`h-[0.5px] absolute bg-primary-blue right-0 w-1/2 lg:right-24 md:right-5 lg:w-[80%]`}
-      ></div>
-    </div>
-  );
-};
-
-const Section = ({
-  image,
-  text,
-  title,
-  position,
-}: {
-  image: string;
-  text: string;
-  title: string;
-  position: "left" | "right";
-}) => {
-  return (
-    <div
-      className={`flex space-y-5 flex-col justify-between align-middle items-start w-full ${
-        position === "left" ? "md:flex-row" : "md:flex-row-reverse"
-      }`}
-    >
-      <div className={`w-full md:w-[50%] md:pl-0 md:pr-10 md:pt-5 md:pb-0`}>
-        <h3 className={"text-[40px] uppercase lg:text-[80px] my-5 font-bold"}>
-          {title}
-        </h3>
-        <p className={"whitespace-pre-wrap lg:text-[20px] text-[16px]"}>
-          {text}
-        </p>
-      </div>
-
-      <div className={`w-full  md:w-[40%] h-[400px] md:h-[600px] relative`}>
-        <Image quality={100} objectFit={"cover"} fill src={image} alt={title} />
       </div>
     </div>
   );
