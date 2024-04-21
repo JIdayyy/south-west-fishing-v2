@@ -1,113 +1,224 @@
 import Image from "next/image";
 
+type Section = {
+  title: string;
+  text: string;
+  image: string;
+};
+
+const sections: Section[] = [
+  {
+    title: "Float tube",
+    text:
+      "Venez découvrir cette approche de la pêche de façon ludique et sécurisé qui vous ouvrent les portes de nouvelles zones de pêches inaccessibles du bord.\n" +
+      "\n" +
+      " C’est l’opportunité d’ une expérience de pêche unique, au plus près de la nature avec des émissions de co² proche de zéro. \n" +
+      "\n" +
+      "Ce type de stage est un bon moyen de vous faire une idée sur l’utilisation d’un float tube avant d’en acheter un.",
+    image: "/homepage/floatTube.png",
+  },
+  {
+    title: "Salmonidés",
+    text:
+      "Venez découvrir ou vous perfectionner aux leurres, au « toc » et à la mouche sur le bassin de la Nivelle et des Nives à la recherche des ses truites sauvages. \n" +
+      "\n" +
+      "Des stages de pêche sur les lacs de montagne de sont aussi envisageables sur demande.",
+    image: "/homepage/salmonidés.png",
+  },
+  {
+    title: "Barque",
+    text:
+      "A quelques kilomètres de l’océan, non loin de Capbreton, se trouve l’étang blanc . \n" +
+      "\n" +
+      "Au milieu des Pins maritimes et des tones de chasse je vous propose de venir à la recherche du « maître des lieux », le brochet les meilleurs périodes sont les mois de mai, juin, fin septembre, octobre et novembre.",
+    image: "/homepage/barque.png",
+  },
+];
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
+    <main className="font-anton flex flex-col">
+      <div className={"flex flex-col p-5 lg:px-24 lg:py-10"}>
+        <h1
+          className={
+            "font-light leading-[100px] md:leading-[110px] lg:leading-[185px] md:text-[100px] lg:text-[175px] text-[90px]"
+          }
+        >
+          MATHIEU BAZARD
+        </h1>
+        <h2 className={"text-[40px] lg:text-[80px] uppercase"}>
+          Guide de pêche
+        </h2>
+        <p className={"text-normal lg:text-[25px] font-light"}>
+          Depuis 2020 South West Fishing vous propose des stages et séjours de
+          pêches dans la région Pays Basque sud Landes.{" "}
         </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+      </div>
+      <div className={"w-full md:px-5 lg:px-24 lg:py-10"}>
+        <div className={"w-full  relative h-[700px]"}>
+          <Image
+            quality={100}
+            objectFit={"cover"}
+            fill
+            src={"/homepage/landing.png"}
+            alt={"landing"}
+          />
         </div>
       </div>
 
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <div className={"text-block"}>
+        <p>
+          Découvrez la pêche dans le sud ouest avec un guide diplômé
+          expérimenté. Partir en séjour guidage ou initiation s’est s’assurer
+          une journée de pêche dans les meilleures conditions, et la certitude
+          de se faire accompagner par un encadrant passionné et expérimenté.
+        </p>
       </div>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+      <Separator />
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+      <ValuesBlock />
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <div
+        className={
+          "flex flex-col space-y-14 lg:space-y-28 px-5 lg:px-24 w-full"
+        }
+      >
+        {sections.map((section, index) => (
+          <>
+            <Section
+              key={index}
+              title={section.title}
+              text={section.text}
+              image={section.image}
+              position={index % 2 === 0 ? "left" : "right"}
+            />
+            <div className={`w-full  relative flex justify-center`}>
+              <div
+                className={`h-[0.5px] absolute bg-primary-blue ${
+                  index % 2 === 0 ? "right-0" : "left-0"
+                } w-1/2  `}
+              ></div>
+            </div>
+          </>
+        ))}
       </div>
+
+      <EndBlock />
     </main>
   );
 }
+
+const ValuesBlock = () => {
+  return (
+    <div
+      className={
+        "relative md:my-[100px] my-[50px] lg:my-[150px] flex items-center align-middle justify-center"
+      }
+    >
+      <div
+        className={
+          "w-full z-10 h-full flex  flex-col font-arima items-center align-middle justify-center"
+        }
+      >
+        <span className={"md:text-[35px]  text-[20px] lg:text-[50px]"}>
+          “Convivialité partage et aventure !”
+        </span>
+        <span className={"md:text-[25px]  text-[16px] lg:text-[35px]"}>
+          Les valeurs qui nous animent
+        </span>
+      </div>
+
+      <div
+        className={
+          "absolute z-0 md:text-[160px] lg:text-[220px] text-[75px] font-bold opacity-5"
+        }
+      >
+        SOUTH WEST
+      </div>
+    </div>
+  );
+};
+
+const EndBlock = () => {
+  return (
+    <div
+      className={
+        "relative md:my-[100px] my-[50px] lg:my-[150px] flex items-center align-middle justify-center"
+      }
+    >
+      <div
+        className={
+          "w-full z-10 h-full flex  flex-row md:flex-row-reverse font-arima items-center align-middle"
+        }
+      >
+        <span
+          className={
+            " w-full md:w-[60%] px-5 md:px-0 md:pr-24 text-[16px] lg:text-[20px]  text-left"
+          }
+        >
+          "Que vous soyez débutant ou pêcheur chevroné, nos guidages s’adaptent
+          à vos besoins. <br />
+          <br />
+          Vous êtes plûtot truite ? Enfillez vos wadders et embarquez sur les
+          nives qui nous offiront de splendides paysages et des poissons
+          joueurs. <br />
+          <br />
+          Plutot carnassiers ? L’étang blanc et ses 183 Hectares abrite
+          Black-Bass Brochet Perches et plus encore ..."
+        </span>
+      </div>
+
+      <div
+        className={
+          "absolute z-0 md:text-[160px] lg:text-[220px] text-[75px] font-bold opacity-5"
+        }
+      >
+        SOUTH WEST
+      </div>
+    </div>
+  );
+};
+
+const Separator = () => {
+  return (
+    <div className={"w-full relative mt-10 flex justify-center"}>
+      <div
+        className={`h-[0.5px] absolute bg-primary-blue right-0 w-1/2 lg:right-24 md:right-5 lg:w-[80%]`}
+      ></div>
+    </div>
+  );
+};
+
+const Section = ({
+  image,
+  text,
+  title,
+  position,
+}: {
+  image: string;
+  text: string;
+  title: string;
+  position: "left" | "right";
+}) => {
+  return (
+    <div
+      className={`flex space-y-5 flex-col justify-between align-middle items-start w-full md:${
+        position === "left" ? "flex-row" : "flex-row-reverse"
+      }`}
+    >
+      <div className={`w-full md:w-[50%] md:pl-0 md:pr-10 md:pt-5 md:pb-0`}>
+        <h3 className={"text-[40px] uppercase lg:text-[80px] my-5 font-bold"}>
+          {title}
+        </h3>
+        <p className={"whitespace-pre-wrap lg:text-[20px] text-[16px]"}>
+          {text}
+        </p>
+      </div>
+
+      <div className={`w-full  md:w-[40%] h-[400px] md:h-[600px] relative`}>
+        <Image quality={100} objectFit={"cover"} fill src={image} alt={title} />
+      </div>
+    </div>
+  );
+};
