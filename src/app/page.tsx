@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 type Section = {
   title: string;
@@ -105,9 +106,32 @@ export default function Home() {
       </div>
 
       <EndBlock />
+
+      <ContactBlock />
     </main>
   );
 }
+
+const ContactBlock = () => {
+  return (
+    <div
+      className={
+        "flex flex-col my-24 md:flex-row justify-between align-middle md:items-center md:space-y-0 space-y-7 font-arima  md:px-24 w-full px-5"
+      }
+    >
+      <h3 className={"uppercase text-[16px] md:text-[25px] lg:text-36px"}>
+        PRÊT POUR L’AVENTURE ?{" "}
+      </h3>
+      <Link href={"/pricing"} className={"underline"}>
+        Voir les tarifs
+      </Link>
+      <Link href={"/"} className={"underline"}>
+        Contactez moi
+      </Link>
+      <p className={""}>Tel: 06.16.74.02.11</p>
+    </div>
+  );
+};
 
 const ValuesBlock = () => {
   return (
@@ -144,7 +168,7 @@ const EndBlock = () => {
   return (
     <div
       className={
-        "relative md:my-[100px] my-[50px] lg:my-[150px] flex items-center align-middle justify-center"
+        "md:my-[100px] my-[50px] px-5 md:px-0 md:pr-24 lg:my-[150px] flex items-center align-middle justify-center"
       }
     >
       <div
@@ -154,7 +178,7 @@ const EndBlock = () => {
       >
         <span
           className={
-            " w-full md:w-[60%] px-5 md:px-0 md:pr-24 text-[16px] lg:text-[20px]  text-left"
+            " w-full relative md:w-[60%]  text-[16px] lg:text-[20px]  text-left"
           }
         >
           "Que vous soyez débutant ou pêcheur chevroné, nos guidages s’adaptent
@@ -167,14 +191,13 @@ const EndBlock = () => {
           Plutot carnassiers ? L’étang blanc et ses 183 Hectares abrite
           Black-Bass Brochet Perches et plus encore ..."
         </span>
-      </div>
-
-      <div
-        className={
-          "absolute z-0 md:text-[160px] lg:text-[220px] text-[75px] font-bold opacity-5"
-        }
-      >
-        SOUTH WEST
+        <span
+          className={
+            "absolute font-anton z-0 md:text-[160px] lg:text-[220px] text-[75px] font-bold opacity-5"
+          }
+        >
+          FISHING NATURE
+        </span>
       </div>
     </div>
   );
@@ -203,8 +226,8 @@ const Section = ({
 }) => {
   return (
     <div
-      className={`flex space-y-5 flex-col justify-between align-middle items-start w-full md:${
-        position === "left" ? "flex-row" : "flex-row-reverse"
+      className={`flex space-y-5 flex-col justify-between align-middle items-start w-full ${
+        position === "left" ? "md:flex-row" : "md:flex-row-reverse"
       }`}
     >
       <div className={`w-full md:w-[50%] md:pl-0 md:pr-10 md:pt-5 md:pb-0`}>
